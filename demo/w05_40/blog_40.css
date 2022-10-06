@@ -48,7 +48,7 @@ body{
     width:var(--fluid-width) ;
     max-width: var(--max-width);
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 1000px;
 }
 
 .blog{
