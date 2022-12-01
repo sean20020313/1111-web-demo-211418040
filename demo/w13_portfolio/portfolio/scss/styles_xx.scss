@@ -119,13 +119,16 @@ Sidebar
 }
 
 .social-icons{
-    display:grid;
-    //margin-top:3rem ;
+    //display:grid;
+    //grid-template-columns: repeat(5,1fr);
+    display: flex;
+    gap:2rem ;
+    margin-top:2rem ;
     width:15rem ;
-    grid-template-columns: repeat(5,1fr);
     justify-items:center ;
+    align-items: center;
     .social-icon{
-        font-size:1.5rem ;
+        font: size 20rem ;
         color: var(--clr-grey-5);
         transition:var(--transition) ;
     }
@@ -141,6 +144,9 @@ Hero
 */
 .hero{
     background-color: var(--clr-primary-10);
+    height: 130hv;
+    
+    
     &-center{
         min-height:calc(100vh - 4rem) ;
         display:grid ;
@@ -162,8 +168,23 @@ Hero
         position: relative;
     }
 }
+
+
 @media screen and (min-width:760px) {
     .hero{
+        .underline{
+            margin-left: 0;
+            margin-bottom:0.5rem;
+        }
+        .hero-info h4{
+            color: var(--clr-grey-5);
+        }
+        &-icons{
+            justify-content:start ;
+        }
+        &-btn{
+            margin-top: 1.25rem;
+        }
 
         &-center{
             grid-template-columns:1fr 1fr ;
@@ -173,17 +194,46 @@ Hero
             display:block ;
             width:70% ;
             position: relative;
+            
             &::before{
                 content: '';
                 position: absolute;
-                top: 0;
-                left: 0;
+                top: 2em;
                 right: -2rem;
                 width: 100%;
                 height: 100%;
-                border: 0.25rem solid var(--clr-primary-10);
+                border: 0.25rem solid var(--clr-primary-5);
                 border-radius: var(--radius);
             }
         }
     }
 }    
+
+.about-center{
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+}
+
+.about-title{
+    .underline{
+        margin-left: 0;
+
+    }
+}
+.about-img{
+   display: block;
+   width:70% ;
+   position: relative;
+
+   &::before{
+    content: '';
+    position: absolute;
+    top:2rem;
+    right:2rem ;
+    width: 100%;
+    height: 100%;
+    border: 0.25rem solid var(--clr-primary-5);
+    border-radius:var(--radius) ;
+   }
+}
+
