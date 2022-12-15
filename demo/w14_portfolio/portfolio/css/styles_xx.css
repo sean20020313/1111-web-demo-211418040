@@ -501,5 +501,31 @@ projects
     grid-area: d;
   }
 }
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 25rem;
+}
+
+.service {
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem;
+}
+.service:hover {
+  background-color: var(--clr-primary-5);
+  color: var(--clr-white);
+  opacity: 0.5;
+}
+.service:hover .ser-img {
+  color: var(--clr-white);
+  opacity: 0.5;
+}
+
+.ser-img {
+  max-width: 40px;
+  display: block;
+  margin: auto;
+}
 
 /*# sourceMappingURL=styles_xx.css.map */
