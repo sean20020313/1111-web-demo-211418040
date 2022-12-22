@@ -1,0 +1,51 @@
+.tiles{
+    padding:4rem 0 ;
+    &-center{
+        width: 90vw;
+        max-width:1170px ;
+        margin: 0 auto;
+        display:grid ;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(5,12.5rem);
+        gap: 1rem;
+        grid-template-areas: 
+        'a a a b'
+        'a a a c'
+        'd d d d'
+        'e f f f'
+        'e g h i'
+        ;
+      }
+      &-center img{
+        display:block ;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      &-1{
+        grid-area: b ;
+      }
+      &-2{
+          grid-area: c ;
+      }
+      &-3{
+          grid-area: d ;
+      }
+      &-4{
+        grid-area: h ;
+      }
+      &-5{
+        grid-area: f ;
+      }
+      &-6{
+        grid-area: e ;
+      }
+      &-7{
+        grid-area: i ;
+      }
+      &-8{
+        grid-area: a ;
+      }
+  }
+  
